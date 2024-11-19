@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N C</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="about3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="logo3.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Main</a></li>
+                <li><a href="index3.html" class="link">Home</a></li>
+                <li><a href="about3.html" class="link">About us</a></li>
+                <li><a href="mennu3.html" class="link">Menu</a></li>
+                <li><a href="gallery3.html" class="link">Gallery</a></li>
+                <li><a href="booking3.html" class="link">Bookings</a></li>
+                <li><a href="contact3.html" class="link">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+</header>
+
+<!--* about us*/-->
+<section class="about" id="about">
+    <div class="about-container">
+        
+        <!-- Image on the Right -->
+        <div class="about-image">
+            <img src="nc3.png" alt="N.C Image">
+        </div>
+        <!-- Text Content -->
+        <div class="about-text-box">
+            <div class="title">
+                <p>ABOUT <span>N.C</span></p>
+            </div>
+            <p class="des">
+                A cozy restaurant specializing in delicious, handcrafted dumplings made fresh daily. Our menu features a variety of dumplings, from classic steamed momos to crispy pan-fried delights, filled with flavorful combinations of meats, vegetables, and spices. Perfect for a quick bite or a relaxed meal, we serve every dish with love, accompanied by house-made dipping sauces and a warm, inviting atmosphere. Come enjoy the ultimate dumpling experience!
+            </p>
+            <a href="booking3.html">Visit or Book <span>Now</span></a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p> <a href="mailto:Bookabite@gmail.com" style="color: #318ddd;">Bookabite@gmail.com</a></p>
+            <p>Address: Sherubtse, Kanglung</p>
+        </div>
+        <div class="footer-center">
+            <ul class="footer-menu">
+                <li><a href="#">Privacy Policy & Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <p>Follow us: 
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<script>
+// Add this to your index.js file or replace the script tag content
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    
+    // Toggle menu function
+    function toggleMenu() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    }
+
+    // Toggle menu when hamburger is clicked
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && 
+            !navLinks.contains(e.target) && 
+            navLinks.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+});
+</script>
+</body>
+</head> 
+</html>   

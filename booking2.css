@@ -1,0 +1,251 @@
+
+.bookings {
+    padding-top: 120px;
+    text-align: center; /* Center-aligns text inside the .bookings container */
+}
+.bookings-title {
+    background-color: #f7f7f7; /* Light gray background for the box */
+    border: 2px solid #e66754; /* Add a border with the desired color */
+    border-radius: 8px; /* Rounded corners for the box */
+    padding: 20px; /* Space inside the box */
+    max-width: 400px; /* Limit the width of the box */
+    margin: 20px auto; /* Center the box horizontally with some vertical margin */
+    text-align: center; /* Center-align the content inside the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+}
+
+.bookings-title h2 {
+    margin-bottom: 10px; /* Add space between the heading and paragraph */
+    color: #333; /* Dark text color for contrast */
+    font-size: 1.5em; /* Adjust font size */
+}
+
+.bookings-title p {
+    color: #666; /* Lighter text color for the paragraph */
+    font-size: 1em; /* Adjust font size for better readability */
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer; /* Makes the card look clickable */
+    padding: 20px;
+    text-align: start;
+    background: linear-gradient(45deg, #ff6b6b, #f7b7a3); /* Initial gradient */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Slightly lifts the card on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Enhances shadow for hover effect */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0c0b0b;
+    border-radius: 5px;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+.form-check-label {
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Spinner Styles */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    text-align: center;
+    color: #0c0b0b;
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.availability-message {
+    color: #f00;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bookings-title h2 {
+        font-size: 1.5em;
+    }
+    
+    .btn-primary {
+        font-size: 0.9em;
+    }
+}
+/* General styling for the checkout section */
+#checkout-section {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container styling */
+#checkout-section .container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Section heading */
+#checkout-section h3 {
+    font-size: 1.8rem;
+    color: #f0eeee;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Form styling */
+#checkout-section .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+#checkout-section label {
+    font-size: 1rem;
+    color: #ede9e9;
+    font-weight: bold;
+}
+
+#checkout-section input {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#checkout-section input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit button styling */
+#checkout-section button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#checkout-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Booking list container */
+#checkout-section .booking-list {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+/* Individual booking item */
+.booking-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-item p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.booking-item button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.booking-item button:hover {
+    background-color: #c82333;
+}

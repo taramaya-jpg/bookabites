@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hanging</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="booking1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="logo1.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Main</a></li>
+                <li><a href="index1.html" class="link">Home</a></li>
+                <li><a href="about1.html" class="link">About us</a></li>
+                <li><a href="mennu1.html" class="link">Menu</a></li>
+                <li><a href="gallery1.html" class="link">Gallery</a></li>
+                <li><a href="booking1.html" class="link">Bookings</a></li>
+                <li><a href="contact1.html" class="link">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+</header>
+<!-- Bookings Section -->
+<section id="bookings" class="bookings">
+    <div class="bookings-box">
+        <div class="bookings-title">
+            <h2>Book Your Table</h2>
+            <p>Reserve a table and enjoy our exclusive ambiance</p>
+        </div>
+    </div>
+    <!-- Booking Form Section -->
+    <section class="booking-section py-5">
+        <div class="container">
+            <form id="bookingForm">
+                <div class="card p-4">
+
+                    <!-- Customer Details -->
+                    <div class="form-group">
+                        <label for="customerName">Full Name</label>
+                        <input type="text" id="customerName" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <!-- Table Selection -->
+                    <div class="form-group">
+                        <label for="table">Table Booking</label>
+                        <select id="table" class="form-control" required>
+                            <option value="">Select a table</option>
+                            <option value="Table 1">Table 1</option>
+                            <option value="Table 2">Table 2</option>
+                            <option value="Table 3">Table 3</option>
+                            <option value="Table 4">Table 4</option>
+                        </select>
+                    </div>
+
+                    <!-- Number of People -->
+                    <div class="form-group">
+                        <label for="people">Number of People</label>
+                        <input type="number" id="people" class="form-control" placeholder="Enter number of people" required>
+                    </div>
+
+                    <!-- Date and Time Selection -->
+                    <div class="form-group">
+                        <label for="bookingDate">Booking Date</label>
+                        <input type="date" id="bookingDate" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingTime">Booking Time</label>
+                        <input type="time" id="bookingTime" class="form-control" required>
+                    </div>
+
+                    <!-- Special Requests -->
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests</label>
+                        <textarea id="specialRequests" class="form-control" rows="4" placeholder="Enter any special requests or dietary preferences"></textarea>
+                    </div>
+
+                    <!-- Payment Option -->
+                    <div class="form-group">
+                        <label for="payment">Payment Method</label>
+                        <select id="payment" class="form-control" required>
+                            <option value="">Select payment method</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Mobile Payment">Mobile Payment</option>
+                        </select>
+                    </div>
+
+                    <!-- Agreement -->
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="agreement" required>
+                        <label class="form-check-label" for="agreement">I confirm my order and agree to the terms.</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-block">Submit Order</button>
+                </div>
+            </form>
+
+            <!-- Confirmation Message -->
+            <div id="confirmationMessage" class="alert alert-success" style="display: none;">
+                <strong>Success!</strong> Your booking has been confirmed. A confirmation email has been sent.
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirm Booking</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Please confirm your booking details.</p>
+                    <ul>
+                        <li><strong>Table:</strong> Table 1</li>
+                        <li><strong>Date:</strong> 2024-11-25</li>
+                        <li><strong>Time:</strong> 7:00 PM</li>
+                        <li><strong>Number of People:</strong> 4</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmBooking">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="checkout-section" class="checkout-section py-5">
+    <div class="container">
+        <h3> Checkout Your Booking</h3>
+        <form id="checkBookingsForm">
+            <div class="form-group">
+                <label for="checkContact">Enter Contact Number</label>
+                <input type="tel" id="checkContact" class="form-control" placeholder="Enter your contact number" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Check My Bookings</button>
+        </form>
+        <div id="bookingList" class="booking-list mt-4"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p> <a href="mailto:Bookabite@gmail.com" style="color: #318ddd;">Bookabite@gmail.com</a></p>
+            <p>Address: Sherubtse, Kanglung</p>
+        </div>
+        <div class="footer-center">
+            <ul class="footer-menu">
+                <li><a href="#">Privacy Policy & Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <p>Follow us: 
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="booking1.js"></script>
+<script>
+    // Add this to your index.js file or replace the script tag content
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        // Toggle menu function
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+    
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', toggleMenu);
+    
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && 
+                !navLinks.contains(e.target) && 
+                navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+    </script>
+</body>
+</head> 
+</html>   
+</body>
+</html>

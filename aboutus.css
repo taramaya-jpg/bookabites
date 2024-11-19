@@ -1,0 +1,342 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+.hero-section {
+    background: url('bga.jpeg') no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding: 50px;
+    align-items: left;
+    justify-content: space-between;
+    overflow: auto; 
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .hero-section {
+        background-attachment: scroll; /* Allow background to scroll on smaller screens */
+        background-size: cover; /* Ensure background covers the full section */
+        height: auto; /* Allow height to adjust to content */
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #f4f4f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Content */
+.hero-content {
+    padding-top: 100px;
+    text-align: center;
+    color: #fff;
+    margin-top: 100px; /* Added margin to avoid overlap with fixed navbar */
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-style: italic;
+    color: #f8f5f5;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcd00;
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffa500;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    color: #050505;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #ffcd00;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hamburger Menu - For smaller screens */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffcd00;
+}
+
+/* Mission & Vision Section */
+.mission-section, .vision-section {
+    padding: 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Black transparent box */
+    margin-bottom: 50px; /* Add bottom margin to separate from footer */
+}
+
+.box-container {
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box-container h1 {
+    color: #ffcd00;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.box-container p {
+    color: #f1f1f1;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+ /* Footer Styling */
+.footer-container {
+    display: flex;                    /* Use flexbox for a horizontal layout */
+    justify-content: space-between;   
+    align-items: center;              
+    width: 100%;                     
+    padding: 20px 50px;               
+    color: #f6f5f5;                 
+    flex-wrap: wrap;                  
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;                          /* Allow each section to take equal space */
+    padding: 10px;                    /* Optional: padding for spacing */
+    text-align: center;               /* Center the text inside each section */
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;          /* Center the menu items */
+    padding: 0;
+    gap: 20px;                        /* Add space between the links */
+}
+
+.footer-menu li {
+    margin: 0;
+}
+
+.footer-container a {
+    color: #ffffff;                   /* Make all footer links white */
+    text-decoration: none;            /* Remove underline from links */
+}
+
+.footer-container a:hover {
+    text-decoration: underline;       /* Optional: underline links on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;       /* Stack the footer sections on smaller screens */
+        align-items: flex-start;      /* Align the items to the left */
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: left;             /* Align text to the left for small screens */
+        flex: none;                   /* Allow sections to take only the required space */
+        width: 100%;                  /* Ensure each section takes full width */
+        padding: 5px 0;               /* Adjust padding for better spacing */
+    }
+
+    .footer-menu {
+        flex-direction: column;       /* Stack the menu items on smaller screens */
+        gap: 10px;                    /* Decrease the gap between menu items */
+    }
+}
+
+
+/* Responsive Adjustments for Mission and Vision */
+@media (max-width: 768px) {
+    .box-container h1 {
+        font-size: 1.5em;
+    }
+
+    .box-container p {
+        font-size: 1em;
+    }
+}
+
+/* Responsive Adjustments for Hero Content */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        padding: 20px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;  /* Initially hide the nav links */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;  /* Show nav links when active */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .menu-icon {
+        display: block;  /* Show the hamburger icon */
+    }
+
+    .hero-section {
+        padding-top: 60px; /* Adjust padding to fit the fixed navbar */
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content h2 {
+        font-size: 16px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+    }
+
+    .box-container h1 {
+        font-size: 1.2em;
+    }
+
+    .box-container p {
+        font-size: 0.9em;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex: none; /* Reset flex properties */
+        margin: 10px 0; /* Add some spacing */
+    }
+}
+@media (max-width: 768px) {
+    .hero-section {
+        background-attachment: fixed; /* Fix background image on small screens */
+        background-repeat: no-repeat; /* Ensure the background doesn't repeat */
+        background-size: cover; /* Ensure background image covers the full section */
+        height: auto; /* Adjust height to fit content and allow scrolling */
+    }
+
+    /* Adjust the content to ensure the text doesn't overlap on small screens */
+    .hero-content {
+        padding-top: 60px; /* Add space for navbar */
+        text-align: center;
+        padding: 20px;
+    }
+}

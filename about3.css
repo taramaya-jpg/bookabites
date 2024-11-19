@@ -1,0 +1,137 @@
+
+/* About Us Section */
+.about {
+    padding: 60px 20px;
+    padding-top: 140px;
+    text-align: center;
+}
+
+/* Container for text and image */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centers content vertically */
+    flex-wrap: wrap; /* Makes sure they wrap on small screens */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text Box */
+.about-text-box {
+    flex: 1; /* Makes it flexible and take available space */
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.about .title p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #090909;
+}
+
+.about .title span {
+    color: #318ddd;
+}
+
+/* Description text styling */
+.about .des {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #090909;
+    margin-bottom: 30px;
+}
+
+/* Styling the link */
+.about a {
+    font-size: 1.2rem;
+    color: #318ddd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+/* Image Styling */
+.about-image img {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 2s ease-out forwards; /* Fade-in on page load */
+    width: 100%; /* Make the image responsive */
+    max-width: 500px; /* Limit max width */
+    border-radius: 115%; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
+}
+
+/* Fade-out on hover */
+.about-image img:hover {
+    animation: fadeOut 2s ease-in forwards; /* Fade-out over 2 seconds */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.about-image img {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 2s ease-out forwards; /* Fade-in over 2 seconds */
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column; /* Stack text and image vertically on smaller screens */
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 80%; /* Slightly reduce the image size on smaller screens */
+        margin-top: 20px; /* Add space between the text and image */
+    }
+
+    .about .title p {
+        font-size: 1.8rem;
+    }
+
+    .about .des {
+        font-size: 1.1rem;
+    }
+
+    .about a {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about .title p {
+        font-size: 1.5rem;
+    }
+
+    .about .des {
+        font-size: 1rem;
+    }
+
+    .about a {
+        font-size: 1rem;
+    }
+}
+

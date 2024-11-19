@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hanging</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="booking2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="logo2.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Main</a></li>
+                <li><a href="index2.html" class="link">Home</a></li>
+                <li><a href="about2.html" class="link">About us</a></li>
+                <li><a href="mmenu2.html" class="link">Menu</a></li>
+                <li><a href="gallery2.html" class="link">Gallery</a></li>
+                <li><a href="booking2.html" class="link">Bookings</a></li>
+                <li><a href="contact2.html" class="link">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+</header>
+
+
+<section id="bookings" class="bookings">
+    <div class="bookings-title">
+        <h2>Book Your Table</h2>
+        <p>Reserve a table and enjoy our exclusive ambiance</p>
+    </div>
+    <!-- Booking Form Section -->
+    <section class="booking-section py-5">
+        <div class="container">
+            <form id="bookingForm">
+                <div class="card p-4">
+                    
+                    <!-- Date Picker -->
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" class="form-control" required>
+                    </div>
+
+                    <!-- Time Picker -->
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" class="form-control" required>
+                    </div>
+
+                    <!-- Table Selection -->
+                    <div class="form-group">
+                        <label for="table">Table Booking</label>
+                        <select id="table" class="form-control" required>
+                            <option value="">Select a table</option>
+                            <option value="Table 1">Table 1</option>
+                            <option value="Table 2">Table 2</option>
+                            <option value="Table 3">Table 3</option>
+                            <option value="Table 4">Table 4</option>
+                        </select>
+                    </div>
+
+                    <!-- Number of People -->
+                    <div class="form-group">
+                        <label for="people">Number of People</label>
+                        <input type="number" id="people" class="form-control" placeholder="Enter number of people" required>
+                    </div>
+
+                    <!-- Payment Option -->
+                    <div class="form-group">
+                        <label for="payment">Payment Method</label>
+                        <select id="payment" class="form-control" required>
+                            <option value="">Select payment method</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Mobile Payment">Mobile Payment</option>
+                        </select>
+                    </div>
+
+                    <!-- Special Requests -->
+                    <div class="form-group">
+                        <label for="requests">Special Requests</label>
+                        <textarea id="requests" class="form-control" placeholder="Any special requests or notes"></textarea>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="form-group">
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" id="contact" class="form-control" placeholder="Enter your contact number" required>
+                    </div>
+
+                    <!-- Agreement -->
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="agreement" required>
+                        <label class="form-check-label" for="agreement">I confirm my booking and agree to the terms.</label>
+                    </div>
+
+                    <!-- Availability Message -->
+                    <div id="availability-message" class="availability-message"></div>
+
+                    <!-- Submit Button and Spinner -->
+                    <button type="submit" class="btn btn-primary btn-block">Submit Booking</button>
+                    <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+                </div>
+            </form>
+        </div>
+    </section>
+</section>
+    <!-- Booking Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Booking Confirmed!</h3>
+            <p>Your table has been successfully booked. We look forward to serving you!</p>
+        </div>
+    </div>
+</section>
+<section id="checkout-section" class="checkout-section py-5">
+    <div class="container">
+        <h3> Checkout Your Booking</h3>
+        <form id="checkBookingsForm">
+            <div class="form-group">
+                <label for="checkContact">Enter Contact Number</label>
+                <input type="tel" id="checkContact" class="form-control" placeholder="Enter your contact number" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Check My Bookings</button>
+        </form>
+        <div id="bookingList" class="booking-list mt-4"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p> <a href="mailto:Bookabite@gmail.com" style="color: #318ddd;">Bookabite@gmail.com</a></p>
+            <p>Address: Sherubtse, Kanglung</p>
+        </div>
+        <div class="footer-center">
+            <ul class="footer-menu">
+                <li><a href="#">Privacy Policy & Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <p>Follow us: 
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="booking2.js"></script>
+<script>
+    // Add this to your index.js file or replace the script tag content
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        // Toggle menu function
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+    
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', toggleMenu);
+    
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && 
+                !navLinks.contains(e.target) && 
+                navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+    </script>
+</body>
+</head> 
+</html>   

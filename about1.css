@@ -1,0 +1,195 @@
+
+
+/* About Section Styling */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Title and Description Box */
+.about-text .title p {
+    padding-top: 130px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.about-text .des {
+    font-size: 1.1em;
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.6;
+    color: #ede8e8;
+}
+
+/* Container Styling */
+.sliding-container {
+    position: relative;
+    width: 90%; /* Adjust this percentage for wider container */
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+}
+
+/* Each Box Styling */
+.sliding-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #050505;
+    color: #e7e4e4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 2s ease, transform 2s ease;
+    padding: 20px;
+}
+
+/* Text Styling within Each Box */
+.sliding-box h3 {
+    font-size: 1.8em; /* Increase heading size */
+    margin-bottom: 10px;
+}
+
+.sliding-box p,
+.sliding-box ul li,
+.sliding-box blockquote {
+    font-size: 24px; /* Increase paragraph and list font size */
+    line-height: 1.5;
+}
+
+/* Active Box Styling */
+.sliding-box.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Parent container styling for centering */
+.about-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Heading Style */
+.about-gallery h3 {
+    font-size: 24px;
+    color: #f7f6f6;
+    margin-bottom: 20px;
+}
+
+/* Gallery container styling */
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+}
+
+/* Individual image styling */
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images */
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Link Styling */
+.about-text a {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #28a745;
+    text-decoration: none;
+    border-bottom: 2px solid #28a745;
+}
+
+.about-text a:hover {
+    color: #007b3a;
+    border-color: #007b3a;
+}
+
+/* Responsive Design */
+
+/* For Tablets */
+@media (max-width: 768px) {
+    .about-text .title p {
+        font-size: 2em;
+    }
+
+    .about-text .des {
+        font-size: 1em;
+        padding: 0 15px;
+    }
+
+    .about-text .highlights h3,
+    .about-text .testimonials h3 {
+        font-size: 1.3em;
+    }
+
+    .about-text .highlights ul li,
+    .about-text .testimonials blockquote {
+        font-size: 1em;
+    }
+
+    .about-gallery .gallery img {
+        max-width: 100%;
+    }
+
+    .about-text a {
+        font-size: 1em;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+    .about-text .title p {
+        font-size: 1.8em;
+    }
+
+    .about-text .des {
+        font-size: 0.95em;
+        padding: 0 10px;
+    }
+
+    .about-text .highlights h3,
+    .about-text .testimonials h3 {
+        font-size: 1.2em;
+    }
+
+    .about-text .highlights ul li,
+    .about-text .testimonials blockquote {
+        font-size: 0.95em;
+    }
+
+    .about-gallery .gallery img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .about-text a {
+        font-size: 0.9em;
+    }
+}
+
