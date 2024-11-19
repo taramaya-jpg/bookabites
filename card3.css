@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Section: Order Summary */
+#order-summary {
+    max-width: 600px;
+    margin: 50px auto; /* Center the section */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+#order-summary .title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff7043;
+}
+
+/* Items Container */
+.items-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fafafa;
+    min-height: 100px; /* Ensures a visible box even if empty */
+    margin-bottom: 20px;
+}
+
+/* Total Price Card */
+.total-price-card {
+    text-align: center;
+    background: #fef5f0;
+    border: 1px solid #ff7043;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.total-price-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff7043;
+}
+
+.total-price-card span {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Proceed to Payment Button */
+#proceed-payment {
+    background-color: #ff7043; /* Orange button */
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    display: block; /* Center the button */
+    margin: 0 auto; /* Center the button horizontally */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+#proceed-payment:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px);
+}
+
+#proceed-payment:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 112, 67, 0.6);
+}
+
+#proceed-payment a {
+    color: white;
+    text-decoration: none;
+    display: block; /* Ensure full button area is clickable */
+}
+
+/* Media Query: Responsive Design */
+@media (max-width: 768px) {
+    #order-summary {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    #proceed-payment {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+}

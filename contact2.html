@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hanging</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="contact2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="logo2.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Main</a></li>
+                <li><a href="index2.html" class="link">Home</a></li>
+                <li><a href="about2.html" class="link">About us</a></li>
+                <li><a href="mmenu2.html" class="link">Menu</a></li>
+                <li><a href="gallery2.html" class="link">Gallery</a></li>
+                <li><a href="booking2.html" class="link">Bookings</a></li>
+                <li><a href="contact2.html" class="link">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+</header>
+
+
+    <!-- Circle for Owner Image with Tagline -->
+    <div class="owner-circle">
+        <img src="nc2.jpg" alt="Restaurant Owner">
+    </div>
+    <div class="contact-box">
+        <p>Feel free to contact us for any inquiries!</p>
+        <p>Email: tsewalhamo823@gmail.com | Phone: +97517915178</p>
+    </div>
+    
+<section id="working-hours" class="working-hours">
+    <div class="container">
+        <div class="working-hours-container">
+            <!-- Working Hours on the Left -->
+            <div class="working-hours-left">
+                <h3>Our Working Hours</h3>
+                <ul class="hours-list">
+                    <li><strong>Monday:</strong> 10:00 AM - 8:00 PM</li>
+                    <li><strong>Tuesday:</strong> 10:00 AM - 8:00 PM</li>
+                    <li><strong>Wednesday:</strong> 10:00 AM - 8:00 PM</li>
+                    <li><strong>Thursday:</strong> 10:00 AM - 8:00 PM</li>
+                    <li><strong>Friday:</strong> 10:00 AM - 10:00 PM</li>
+                    <li><strong>Saturday:</strong> 10:00 AM - 10:00 PM</li>
+                    <li><strong>Sunday:</strong> 8:00 AM - 10:00 PM</li>
+                </ul>
+            </div>
+
+            <!-- Feedback Form on the Right -->
+            <div class="feedback-form-container">
+                <h3>Feedback Form</h3>
+                <div class="feedback-form">
+                    <label for="service-rating">Rate our Service</label>
+                    <select id="service-rating" required>
+                        <option value="">Select</option>
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                    <label for="food-quality">Rate Food Quality</label>
+                    <select id="food-quality" required>
+                        <option value="">Select</option>
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                    <label for="price-satisfaction">Rate Price Satisfaction</label>
+                    <select id="price-satisfaction" required>
+                        <option value="">Select</option>
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                    <label for="feedback">Additional Feedback</label>
+                    <textarea id="feedback" rows="4"></textarea>
+                    <button type="submit">Submit Feedback</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Thank you message will appear here -->
+    <div class="success-message" style="display:none;">Thank you for your feedback!</div>
+    <div class="error-message" style="display:none;">Something went wrong. Please try again.</div>
+    <div class="map-container">
+        <h3>Our Location</h3>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2910.2342539130227!2d91.6320114131015!3d27.322671203965546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3759c7c99c3fc577%3A0x33f5b13b7c8f9021!2sSherubtse+College%2C+Bhutan!5e0!3m2!1sen!2sus!4v1619603743299!5m2!1sen!2sus" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p> <a href="mailto:Bookabite@gmail.com" style="color: #318ddd;">Bookabite@gmail.com</a></p>
+            <p>Address: Sherubtse, Kanglung</p>
+        </div>
+        <div class="footer-center">
+            <ul class="footer-menu">
+                <li><a href="#">Privacy Policy & Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <p>Follow us: 
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="contact2.js"></script>
+<script>
+    // Add this to your index.js file or replace the script tag content
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        // Toggle menu function
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+    
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', toggleMenu);
+    
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && 
+                !navLinks.contains(e.target) && 
+                navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+    </script>
+</body>
+</head> 
+</html>   

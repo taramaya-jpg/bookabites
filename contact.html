@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant WordPress Theme</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Book A Bite</h1>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Three-line hamburger icon -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="restaurant1.html">Restaurant</a>
+                    <div class="dropdown-content">
+                        <a href="index3.html">NC</a>
+                        <a href="index2.html">Hanging</a>
+                        <a href="index1.html">Bakery</a>
+                    </div>
+                </li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contacts.html">Team</a></li>
+            </ul>
+        </nav>
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <p>Hello!
+                We are Book A Bite team
+            </p>
+            <div class="team-members">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="sonam.jpg" alt="Sonam Yangchen">
+                    </div>
+                    <div class="card-info">
+                        <h3>Sonam Yangchen</h3>
+                        <p>07230064</p>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-img">
+                        <img src="tara.jpg" alt="Tara Maya Limbu">
+                    </div>
+                    <div class="card-info">
+                        <h3>Tara Maya Limbu</h3>
+                        <p>07230078</p>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-img">
+                        <img src="drime.png" alt="Drimey Yoedzer">
+                    </div>
+                    <div class="card-info">
+                        <h3>Drimey Yoedzer</h3>
+                        <p>07230010</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="yo.jpg" alt="Tara Maya Limbu">
+                    </div>
+                    <div class="card-info">
+                        <h3>Kuenga T Thinley</h3>
+                        <p>07230078</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
+<div class="footer-container">
+    <div class="footer-left">
+        <p> <a href="mailto:Bookabite@gmail.com" style="color: #318ddd;">Bookabite@gmail.com</a></p>
+        <p>Address: Sherubtse, Kanglung</p>
+    </div>
+    <div class="footer-center">
+        <ul class="footer-menu">
+            <li><a href="#">Privacy Policy & Terms of Service</a></li>
+        </ul>
+    </div>
+    <div class="footer-right">
+        <p>Follow us: 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </div>
+</div>
+
+        </header>
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', function() {
+            navLinks.classList.toggle('active'); // Toggles the active class on click
+        });
+    });
+        </script>
+    </body>
+    </html>

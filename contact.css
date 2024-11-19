@@ -1,0 +1,291 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+.hero-section {
+    background: url('bgh.jpg') no-repeat center center/cover;
+    background-attachment: fixed;  /* This makes the background image fixed while the content scrolls */
+    height: auto;  /* Adjusts the height to fit the content */
+    min-height: 100vh;  /* Ensures the section takes up at least the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: auto;  /* Makes the content scrollable */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #f4f4f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    color: #050505;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #ffcd00;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hamburger Menu - For smaller screens */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffcd00;
+}
+
+/* Search Bar Section */
+.center-section {
+    display: flex;
+    align-items: center;
+}
+
+.center-section input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 180px;
+    transition: width 0.3s;
+}
+
+.center-section button {
+    padding: 5px 10px;
+    background-color: #4fa1e9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s;
+}
+
+.center-section button:hover {
+    background-color: #337ab7;
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-section h2 {
+    font-size: 36px;
+    color: #0c0c0c;
+    margin-bottom: 20px;
+}
+
+.team-section p {
+    font-size: 18px;
+    color: #090909;
+    max-width: 800px;
+    margin: 0 auto 10px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;  /* Centers the items horizontally */
+    align-items: center;      /* Centers the items vertically */
+    gap: 20px;                /* Adds space between the cards */
+    flex-wrap: wrap;          /* Ensures the items wrap to the next line if necessary */
+    padding: 20px;            /* Optional: adds padding around the team section */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;   /* Ensures the image and text are stacked vertically */
+    align-items: center;      /* Centers the content (image and text) inside each card */
+    text-align: center;       /* Centers the text inside each card */
+    max-width: 250px;         /* Optional: limit the maximum width of each card */
+    padding: 10px;            /* Optional: adds padding inside each card */
+    border: 1px solid #ddd;   /* Optional: adds a border to each card */
+    border-radius: 10px;      /* Optional: rounds the corners of each card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: adds a subtle shadow to each card */
+}
+
+.card-img img {
+    width: 100%;             /* Makes the images responsive */
+    height: auto;            /* Maintains the aspect ratio of images */
+    border-radius: 8px;      /* Optional: rounds the corners of the image */
+    object-fit: cover;       /* Ensures the image fills the container without distortion */
+}
+
+.card-info h3 {
+    margin-top: 10px;        /* Adds space between the image and name */
+    font-size: 1.2rem;       /* Optional: adjusts the font size of the name */
+}
+
+.card-info p {
+    font-size: 1rem;         /* Optional: adjusts the font size of the ID */
+    color: #f9f3f3;             /* Optional: changes the color of the ID text */
+}
+
+/* Footer Styling */
+.footer-container {
+    display: flex;                    /* Use flexbox for a horizontal layout */
+    justify-content: space-between;   
+    align-items: center;              
+    width: 100%;                     
+    padding: 20px 50px;               
+    color: #f6f5f5;                 
+    flex-wrap: wrap;                  
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;                          /* Allow each section to take equal space */
+    padding: 10px;                    /* Optional: padding for spacing */
+    text-align: center;               /* Center the text inside each section */
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;          /* Center the menu items */
+    padding: 0;
+    gap: 20px;                        /* Add space between the links */
+}
+
+.footer-menu li {
+    margin: 0;
+}
+
+.footer-container a {
+    color: #ffffff;                   /* Make all footer links white */
+    text-decoration: none;            /* Remove underline from links */
+}
+
+.footer-container a:hover {
+    text-decoration: underline;       /* Optional: underline links on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;       /* Stack the footer sections on smaller screens */
+        align-items: flex-start;      /* Align the items to the left */
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: left;             /* Align text to the left for small screens */
+        flex: none;                   /* Allow sections to take only the required space */
+        width: 100%;                  /* Ensure each section takes full width */
+        padding: 5px 0;               /* Adjust padding for better spacing */
+    }
+
+    .footer-menu {
+        flex-direction: column;       /* Stack the menu items on smaller screens */
+        gap: 10px;                    /* Decrease the gap between menu items */
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar {
+        padding: 20px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* Footer adjustments */
+    .footer-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Hero section adjustments */
+    .hero-section {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+    }
+
+    /* Hero content adjustments */
+    .hero-content {
+        padding-top: 60px;
+        text-align: center;
+        padding: 20px;
+    }
+}

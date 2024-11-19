@@ -1,0 +1,236 @@
+
+
+/* Owner Circle Section */
+.owner-circle {
+    display: flex;
+    padding-top: 130px;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    margin: 2rem auto; 
+    max-width: 600px;
+}
+
+.owner-circle img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    margin-bottom: 1rem; /* Space between the image and the text */
+}
+
+.owner-circle p {
+    color: #f1ecec; /* Light color for the text */
+    margin: 0.5rem 0; /* Space between paragraphs */
+    font-size: 1.2em; /* Adjust the font size */
+}
+.contact-box {
+    max-width: 600px; 
+    margin: 30px auto; 
+    padding: 20px; 
+    background-color: #eea873;
+    border-radius: 8px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; /* Center the text inside the box */
+}
+
+.contact-box p {
+    font-size: 1rem; /* Set font size for paragraphs */
+    color: #333; /* Dark text color */
+    margin: 10px 0; /* Add vertical spacing between paragraphs */
+}
+
+.contact-box p:first-of-type {
+    font-weight: bold; /* Make the first paragraph bold */
+}
+
+/* Working Hours Section */
+.working-hours {
+    background-color: rgba(0, 0, 0, 0.5); /* Light background for the section */
+    padding: 40px 0; /* Adds space around the section */
+    text-align: center; /* Centers the content */
+}
+
+.working-hours h3 {
+    font-size: 1.8em; /* Size for the heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+    color: #f9f6f6; /* Dark text color */
+}
+
+.hours-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+}
+
+.hours-list li {
+    font-size: 1.2em; /* Makes the text readable */
+    margin: 10px 0; /* Adds space between each list item */
+    color: #f7f3f3; /* Slightly lighter color for the list items */
+}
+
+.hours-list li strong {
+    font-weight: bold; /* Makes the days bold */
+}
+
+/* Flex container to layout Working Hours and Feedback Form */
+.working-hours-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px; /* Adds space between the two sections */
+}
+
+.working-hours-left {
+    flex: 1; /* Take up equal space */
+    min-width: 300px; /* Ensures it doesn't shrink too small */
+    text-align: left;
+}
+
+/* Keyframes for Dynamic Gradient Animation */
+@keyframes gradient {
+    0% { 
+        background: linear-gradient(45deg, #ff9999, #ffcc66); 
+    }
+    25% { 
+        background: linear-gradient(45deg, #99ccff, #ff9999); 
+    }
+    50% { 
+        background: linear-gradient(45deg, #99ff99, #ffcc66); 
+    }
+    75% { 
+        background: linear-gradient(45deg, #ffcc66, #99ccff); 
+    }
+    100% { 
+        background: linear-gradient(45deg, #ff9999, #99ff99); 
+    }
+}
+
+/* Applying the animation to the feedback form */
+.feedback-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ff9999, #ffcc66); /* Initial gradient */
+    animation: gradient 5s ease infinite; /* Apply the gradient animation */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+/* Styling the form and other elements */
+.feedback-form h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Input fields and buttons */
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+    color: #333;
+}
+
+/* Button Styling */
+.feedback-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(45deg, #ff7f50, #f15f79); /* Initial gradient for button */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect for Button */
+.feedback-form button:hover {
+    background: linear-gradient(45deg, #f15f79, #ff7f50); /* Reverse gradient on hover */
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    background: linear-gradient(135deg, #d4edda, #b8e0b8);
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .working-hours-container {
+        flex-direction: column; /* Stack the sections vertically */
+        gap: 20px;
+    }
+
+    .working-hours h3,
+    .feedback-form-container h3 {
+        font-size: 1.5em; /* Adjusts the heading font size */
+    }
+
+    .feedback-form {
+        max-width: 100%; /* Ensure the form takes up full width on mobile */
+    }
+
+    .hours-list li {
+        font-size: 1em; /* Adjusts font size for mobile */
+    }
+}
+
+/* Container for the map */
+.map-container {
+    text-align: center; /* Centers the content */
+    margin-top: 30px; /* Adds space above the map */
+    padding: 20px; /* Adds padding around the map */
+}
+
+/* Heading styling */
+.map-container h3 {
+    font-size: 1.5em; /* Adjusts the size of the heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+    color: #ffffff; /* Sets the text color */
+}
+
+/* Styling the iframe to make the map responsive */
+.map-container iframe {
+    width: 100%; /* Ensures the iframe takes up the full width of the container */
+    height: 300px; /* Keeps the height fixed */
+    max-width: 100%; /* Ensures it doesn’t overflow on smaller screens */
+    border: none; /* Removes the iframe border */
+    border-radius: 8px; /* Adds rounded corners to the map */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the map */
+}
+
+/* Media query for responsive behavior */
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 300px; /* Reduces the height of the map on smaller screens */
+    }
+}
+
