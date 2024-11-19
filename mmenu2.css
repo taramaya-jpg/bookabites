@@ -1,0 +1,108 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Menu Section */
+.menu {
+    padding: 3rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding-top: 130px;
+}
+
+.menu .title p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f3f0f0;
+}
+
+.menu .title {
+    margin-bottom: 1rem;
+}
+
+.menu .des {
+    font-size: 1rem;
+    color: #f6f2f2;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.menu .menu-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    background-color: #318ddd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu .menu-button:hover {
+    background-color: #1a73e8;
+}
+
+/* Basic Carousel Styling */
+.carousel {
+    position: relative;
+    max-width: 100%;
+
+    border-radius:0; /* Optional: makes edges rounded */
+    overflow: hidden; /* Ensures that images don't overflow */
+}
+.carousel-inner {
+    width: 110%;
+    height: 200px; /* Adjusted height to make it shorter (you can change this value) */
+    overflow: hidden; /* Makes sure images fit within the container */
+}
+
+.carousel-item img {
+    width: 130%;
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover; /* Keeps the image's aspect ratio without distortion */
+}
+
+/* Controls */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.5); /* Light color for buttons */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 2; /* Ensures buttons are above the images */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    color: #fff; /* Change color on hover */
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background on hover */
+}
+
+.carousel-control-prev {
+    left: 10px; /* Position the previous button */
+}
+
+.carousel-control-next {
+    right: 10px; /* Position the next button */
+}
+
+/* Optional: Add some styling for the carousel captions */
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds text shadow for better visibility */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+

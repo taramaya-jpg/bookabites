@@ -1,0 +1,300 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+.hero-section {
+    background: url('bgr.jpg') center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-repeat: no-repeat; /* No repeat on larger screens */
+    background-attachment: scroll; /* Allow scrolling background on all screens by default */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #f4f4f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #ffcd00;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffcd00;
+}
+h2{
+    padding-top: 50px;
+    font-style: italic;
+}
+/* Container for restaurant cards */
+.container {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between; /* Space out the boxes */
+    gap: 20px; /* Add space between the boxes */
+    padding-top: 50px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Individual restaurant card */
+.box {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 5px;
+    width: 30%; /* Set to 30% width for three boxes in one row */
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.box h3 {
+    margin: 15px 0;
+    color: #f4f0f0;
+    font-size: 1.5em;
+}
+
+
+.shop-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e87878;
+    color: #ebe3e3;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #3fe525;
+}
+
+/* Footer Styling */
+.footer-container {
+    display: flex;                    /* Use flexbox for a horizontal layout */
+    justify-content: space-between;   
+    align-items: center;              
+    width: 100%;                     
+    padding: 20px 50px;               
+    color: #f6f5f5;                 
+    flex-wrap: wrap;                  
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;                          /* Allow each section to take equal space */
+    padding: 10px;                    /* Optional: padding for spacing */
+    text-align: center;               /* Center the text inside each section */
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;          /* Center the menu items */
+    padding: 0;
+    gap: 20px;                        /* Add space between the links */
+}
+
+.footer-menu li {
+    margin: 0;
+}
+
+.footer-container a {
+    color: #ffffff;                   /* Make all footer links white */
+    text-decoration: none;            /* Remove underline from links */
+}
+
+.footer-container a:hover {
+    text-decoration: underline;       /* Optional: underline links on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;       /* Stack the footer sections on smaller screens */
+        align-items: flex-start;      /* Align the items to the left */
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: left;             /* Align text to the left for small screens */
+        flex: none;                   /* Allow sections to take only the required space */
+        width: 100%;                  /* Ensure each section takes full width */
+        padding: 5px 0;               /* Adjust padding for better spacing */
+    }
+
+    .footer-menu {
+        flex-direction: column;       /* Stack the menu items on smaller screens */
+        gap: 10px;                    /* Decrease the gap between menu items */
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    @media (max-width: 768px) {
+        .hero-section {
+            background-attachment: fixed; /* Fix background image on small screens */
+            background-repeat: no-repeat; /* Ensure the background doesn't repeat */
+            background-size: cover; /* Ensure background image covers the full section */
+            height: auto; /* Adjust height to fit content and allow scrolling */
+        }
+    
+        /* Adjust the content to ensure the text doesn't overlap on small screens */
+        .hero-content {
+            padding-top: 60px; /* Add space for navbar */
+            text-align: center;
+            padding: 20px;
+        }
+    }
+h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #f6f0f0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center; /* Center the boxes */
+    }
+
+    .box {
+        width: 90%; /* Adjust the box width to 90% of the container */
+        max-width: 100%; /* Remove max-width to make it fit the screen */
+        margin-bottom: 20px; /* Add spacing between boxes */
+    }
+}
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content h2 {
+        font-size: 16px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+    }
+
+    .container {
+        gap: 10px; /* Reduce the gap between items for small screens */
+    }
+
+    .box {
+        width: 100%; /* Make box take up full width of the container */
+        margin-bottom: 10px; /* Space out the boxes */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-right {
+        margin-top: 10px;
+    }
+    }
+    }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex: none; /* Reset flex properties */
+        margin: 10px 0; /* Add some spacing */
+    }
+}

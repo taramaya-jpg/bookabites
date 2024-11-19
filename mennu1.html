@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hanging</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="mennu1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="logo1.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Main</a></li>
+                <li><a href="index1.html" class="link">Home</a></li>
+                <li><a href="about1.html" class="link">About us</a></li>
+                <li><a href="mennu1.html" class="link">Menu</a></li>
+                <li><a href="gallery1.html" class="link">Gallery</a></li>
+                <li><a href="booking1.html" class="link">Bookings</a></li>
+                <li><a href="contact1.html" class="link">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+</header>
+
+<!-- Menu Section -->
+ <section class="menu">
+<div class="menu-box">
+    <div class="menu-text">
+        <div class="title">
+            <p>OUR FOOD QUALITY</p>
+        </div>
+        <p class="des">
+            Our menu is crafted to delight every taste, offering a perfect blend of freshly baked breads, irresistible pastries, and decadent desserts. Whether you're in the mood for a savory snack or a sweet treat, our diverse selection promises something for everyone, made with love and the finest ingredients to satisfy your cravings. Come explore our menu and indulge in a world of flavor!
+        </p>
+        <a href="menu1.html" class="menu-button">Here is menu list</a>
+    </div>
+</div>
+</section>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p> <a href="mailto:Bookabite@gmail.com" style="color: #318ddd;">Bookabite@gmail.com</a></p>
+            <p>Address: Sherubtse, Kanglung</p>
+        </div>
+        <div class="footer-center">
+            <ul class="footer-menu">
+                <li><a href="#">Privacy Policy & Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <p>Follow us: 
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="mennu1.js"></script>
+<script>
+    // Add this to your index.js file or replace the script tag content
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        // Toggle menu function
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+    
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', toggleMenu);
+    
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && 
+                !navLinks.contains(e.target) && 
+                navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+    </script>
+</body>
+</head> 
+</html>   
+</body>
+</html>
