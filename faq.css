@@ -1,0 +1,102 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(232, 149, 89);
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #f5eded;
+}
+
+/* FAQ Button */
+.faq-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.faq-btn:hover {
+    background-color: #555;
+}
+
+/* FAQ Modal Styles */
+.faq-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* semi-transparent background */
+}
+
+.faq-modal-content {
+    background-color: rgb(35, 35, 35);
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    max-height: 70vh; /* Maximum height of the modal */
+    overflow: hidden;
+}
+
+.faq-close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.faq-close-btn:hover,
+.faq-close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fcfcfc;
+}
+
+/* Scrollable FAQ Section */
+.faq-content {
+    max-height: 400px; /* Adjust this value based on your preference */
+    overflow-y: auto; /* Enables scrolling */
+    padding-right: 10px; /* Optional: Adds a bit of space for scrollbar */
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    color: #fdfdfd;
+}

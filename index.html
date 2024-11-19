@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant WordPress Theme</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Book A Bite</h1>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Three-line hamburger icon -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="restaurant1.html">Restaurant</a>
+                    <div class="dropdown-content">
+                        <a href="index3.html">NC</a>
+                        <a href="index2.html">Hanging</a>
+                        <a href="index1.html">Bakery</a>
+                    </div>
+                </li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Team</a></li>
+                <li><a href="ourwork.html">Our Work</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Welcome to BOOK A BITE</h1>
+            <h2>Book now, Save time!</h2>
+            <a href="restaurant1.html" class="btn">Book Now</a>
+        </div>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p> <a href="mailto:Bookabite@gmail.com" style="color: #318ddd;">Bookabite@gmail.com</a></p>
+                <p>Address: Sherubtse, Kanglung</p>
+            </div>
+            <div class="footer-center">
+                <ul class="footer-menu">
+                    <li><a href="#">Privacy Policy & Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <p>Follow us: 
+                    <a href="#">Facebook</a> | 
+                    <a href="#">Instagram</a>
+                </p>
+            </div>
+        </div>
+        <button id="faqBtn" class="faq-btn">FAQ</button>
+
+<!-- FAQ Modal -->
+<div id="faqModal" class="faq-modal">
+    <div class="faq-modal-content">
+        <span class="faq-close-btn" id="faqCloseBtn">&times;</span>
+
+        <h1>Frequently Asked Questions</h1>
+
+        <!-- Scrollable FAQ Content -->
+        <div class="faq-content">
+            <div class="faq-item">
+                <h3 class="faq-question">1. What are your restaurant's hours of operation?</h3>
+                <p class="faq-answer">We are open every day from 11:00 AM to 10:00 PM. We are closed on public holidays.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">2. Can I make a reservation online?</h3>
+                <p class="faq-answer">Yes, you can make a reservation through our online booking system on the 'Reservations' page. Just select the time, date, and number of people.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">3. Do you offer takeout or delivery?</h3>
+                <p class="faq-answer">Yes, we offer both takeout and delivery services. You can place an order via our website or call us directly.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">4. Can I customize my order?</h3>
+                <p class="faq-answer">Yes, most of our dishes can be customized based on your preferences. Please inform us of any specific dietary restrictions or preferences when placing your order.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">5. Do you offer vegetarian or vegan options?</h3>
+                <p class="faq-answer">Yes, we have a variety of vegetarian and vegan options available on our menu. Please check the menu section for more details.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">6. Is your restaurant kid-friendly?</h3>
+                <p class="faq-answer">Yes, our restaurant is family-friendly, and we offer a special kids' menu with smaller portion sizes and child-friendly options.</p>
+            </div>
+
+            <div>
+
+
+    </div>
+</div>
+
+<!-- Rest of your page content goes here -->
+ </header>
+
+    <script src="script.js"></script>
+    <script src="faq.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+
+
+/* Base Styles */
+.gallery {
+    padding: 40px 20px;
+    padding-top: 120px;
+    text-align: center;
+}
+
+.gallery-box {
+    border: 2px solid #318ddd; 
+    border-radius: 8px; 
+    background-color: black; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    max-width: 600px; 
+    margin: 20px auto; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-title h2 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    color: #f1ecec; 
+}
+
+.gallery-title p {
+    font-size: 16px; 
+    color: #f1ecec; 
+}
+
+
+/* Grid Layout */
+.gallery-content {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    animation: changeColor 9s infinite; /* Animation to cycle colors */
+}
+
+.item-img-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+@keyframes changeColor {
+    0% { background-color: #ff9999; }   /* Light Red */
+    16% { background-color: #ffcc99; }  /* Light Orange */
+    33% { background-color: #ffff99; }  /* Light Yellow */
+    50% { background-color: #99ff99; }  /* Light Green */
+    66% { background-color: #99ccff; }  /* Light Blue */
+    83% { background-color: #cc99ff; }  /* Light Purple */
+    100% { background-color: #ff9999; } /* Return to Light Red */
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .gallery-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-title h2 {
+        font-size: 1.5em;
+    }
+
+    .gallery-title p {
+        font-size: 0.9em;
+    }
+    
+    .gallery-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .gallery-item {
+        padding: 10px;
+    }
+
+    .item-img-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .item-desc {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-title h2 {
+        font-size: 1.2em;
+    }
+
+    .gallery-title p {
+        font-size: 0.8em;
+    }
+    
+    .gallery-content {
+        grid-template-columns: 1fr;
+    }
+
+    .item-img-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-desc {
+        font-size: 0.8em;
+    }
+}
+

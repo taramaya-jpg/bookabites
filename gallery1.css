@@ -1,0 +1,90 @@
+
+/* Gallery Section Styling */
+.gallery {
+    padding: 20px;
+    padding-top: 130px;
+}
+
+.gallery-box {
+    max-width: 800px; /* Limit the width of the box */
+    margin: 20px auto; /* Center the box horizontally */
+    padding: 30px; /* Add padding inside the box */
+    background-color: #fff; /* White background for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+.gallery-box h2 {
+    font-size: 2rem; /* Font size for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+    color: #1986e4; /* Blue color for the heading */
+}
+
+.gallery-box p {
+    font-size: 1rem; /* Font size for the paragraph */
+    color: #b8b6b6; /* Light gray color for the paragraph */
+}
+
+.gallery-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    width: calc(20% - 50px); /* Display 2 items per row */
+    cursor: pointer;
+    margin-bottom: 20px; /* Space between rows */
+    text-align: center;
+}
+
+.item-img-circle {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item-desc {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Lightbox Styling */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Hover effects for gallery items */
+.gallery-item:hover .item-img-circle {
+    transform: scale(1.05); /* Zoom in effect */
+}
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        width: calc(100% - 20px); /* Stack items vertically on smaller screens */
+    }
+}
+

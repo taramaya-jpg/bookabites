@@ -1,0 +1,160 @@
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    padding-top: 130px;
+
+}
+
+/* Styling for the Gallery Box */
+.gallery-box {
+    background-color: #f4aa83;  /* Light background for the gallery section */
+    padding: 40px 20px;  /* Add padding for spacing */
+    margin-bottom: 40px;  /* Space below the gallery box */
+    border-radius: 8px;  /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    text-align: center;  /* Center the content */
+}
+
+/* Styling for the Gallery Title */
+.gallery-title h2 {
+    font-size: 36px;  /* Larger font for the title */
+    font-weight: 600;  /* Bold font weight */
+    color: #333;  /* Dark text color */
+    margin-bottom: 10px;  /* Space below the title */
+}
+
+.gallery-title p {
+    font-size: 18px;  /* Medium font size for description */
+    color: #666;  /* Slightly lighter color for description */
+    line-height: 1.6;  /* Increased line height for readability */
+    margin-bottom: 20px;  /* Space below the description */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-box {
+        padding: 30px 15px;  /* Adjust padding for smaller screens */
+    }
+
+    .gallery-title h2 {
+        font-size: 30px;  /* Slightly smaller title on smaller screens */
+    }
+
+    .gallery-title p {
+        font-size: 16px;  /* Adjust description font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-box {
+        padding: 20px 10px;  /* Further reduce padding on very small screens */
+    }
+
+    .gallery-title h2 {
+        font-size: 24px;  /* Smaller title for very small screens */
+    }
+
+    .gallery-title p {
+        font-size: 14px;  /* Smaller description font size */
+    }
+}
+
+/* Gallery Content */
+.gallery-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap when the screen is smaller */
+    gap: 20px; /* Space between gallery items */
+    justify-content: center; /* Center the items */
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px; /* Set a default width for gallery items */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+}
+
+.item-img-circle {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.item-desc {
+    font-size: 16px;
+    color: #f5eeee;
+    line-height: 1.4;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .gallery-title h2 {
+        font-size: 28px;
+    }
+
+    .gallery-title p {
+        font-size: 16px;
+    }
+
+    .gallery-content {
+        justify-content: center;
+    }
+
+    .gallery-item {
+        width: 45%; /* Allow each item to take 45% of the width on smaller screens */
+        margin-bottom: 20px; /* Adds space between rows */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-title h2 {
+        font-size: 24px;
+    }
+
+    .gallery-title p {
+        font-size: 14px;
+    }
+
+    .gallery-item {
+        width: 90%; /* On very small screens, items will take almost full width */
+    }
+
+    .item-img-circle {
+        width: 160px;
+        height: 160px; /* Reduce image size on small screens */
+    }
+
+    .item-desc {
+        font-size: 14px;
+    }
+}
+
+/* Define the keyframes for the rotation */
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg); /* Start with no rotation */
+    }
+    100% {
+        transform: rotate(360deg); /* End with a full 360-degree rotation */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gallery-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

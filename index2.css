@@ -1,0 +1,113 @@
+
+/* Home Section */
+.home {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-top: 120px;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.left img {
+    border-radius: 100%;
+    width: 300px;
+    height:300px;
+    animation: rotate 5s linear infinite; /* Rotating animation */
+    transform-origin: center;
+    transition: filter 0.3s ease;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Start from 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* Rotate to 360 degrees */
+    }
+}
+.left p {
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #faf3f3;
+    margin-top: 1rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.right .top p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.right .top a {
+    color: #f4f1f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.right .top a:hover {
+    text-decoration: underline;
+}
+
+.right .bottom {
+    font-size: 1.6rem;
+    color: #e4dbdb;
+    font-weight: bold;
+}
+/* Style for the "Book Your Table" button */
+.book-table-btn {
+    display: inline-block;
+    background-color: #0f0f0f; /* Button background color */
+    color: rgb(9, 9, 9); /* Text color */
+    padding: 15px 30px; /* Padding for button */
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-top: 1rem;
+}
+
+.book-table-btn:hover {
+    background-color: #ee927e; /* Darker shade on hover */
+}
+
+/* Optional: Add focus outline for accessibility */
+.book-table-btn:focus {
+    outline: 3px solid #2188f3;
+}
+.right .bottom span {
+    color: #318ddd;
+}
+
+
+.home-footer {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right {
+        padding: 0;
+    }
+
+}

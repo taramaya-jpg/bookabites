@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N C</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="gallery3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="logo3.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Main</a></li>
+                <li><a href="index3.html" class="link">Home</a></li>
+                <li><a href="about3.html" class="link">About us</a></li>
+                <li><a href="mennu3.html" class="link">Menu</a></li>
+                <li><a href="gallery3.html" class="link">Gallery</a></li>
+                <li><a href="booking3.html" class="link">Bookings</a></li>
+                <li><a href="contact3.html" class="link">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+</header>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="gallery-box">
+        <div class="gallery-title">
+            <h2>Our Gallery</h2>
+            <p>Explore our delightful dishes with brief descriptions</p>
+        </div>
+    </div>
+    <div class="gallery-content">
+        <div class="gallery-item">
+            <div class="item-img-circle" style="background-image: url('momonc3.png');"></div>
+            <p class="item-desc">Momo - Steamed dumplings, savory fillings.</p>
+        </div>
+        <div class="gallery-item">
+            <div class="item-img-circle" style="background-image: url('balay3.jpg');"></div>
+            <p class="item-desc">Balay: Soft, crispy, momo-style snack.</p>
+        </div>
+        <div class="gallery-item">
+            <div class="item-img-circle" style="background-image: url('comean3.jpeg');"></div>
+            <p class="item-desc">Cowmeane: Flavorful noodles, savory broth.</p>
+        </div>
+        <div class="gallery-item">
+            <div class="item-img-circle" style="background-image: url('milktea3.jpg');"></div>
+            <p class="item-desc">Chana: Spicy chickpeas, hearty delight</p>
+        </div>
+        <div class="gallery-item">
+            <div class="item-img-circle" style="background-image: url('ice3.jpg');"></div>
+            <p class="item-desc">Ice Drinks: Refreshing, chilled, fruity flavors</p>
+        </div>
+        <div class="gallery-item">
+            <div class="item-img-circle" style="background-image: url('milktea3.jpg');"></div>
+            <p class="item-desc">Milk Tea: Creamy, sweet, comforting blend.t</p>
+        </div>
+        <div class="gallery-item">
+            <div class="item-img-circle" style="background-image: url('suja3.jpeg');"></div>
+            <p class="item-desc">Suja (Bhutanese Tea):rich, traditional brew.</p>
+        </div>
+        <div class="gallery-item">
+            <div class="item-img-circle" style="background-image: url('batub3.jpeg');"></div>
+            <p class="item-desc">Batub (Bhutanese Soup): Hearty, spicy, nourishing soup.</p>
+        </div>
+        <div class="gallery-item">
+            <div class="item-img-circle" style="background-image: url('fried3.jpg');"></div>
+            <p class="item-desc">Fried Rice: Savory rice, veggies, and spices.</p>
+        </div>
+        <div class="gallery-item">
+            <div class="item-img-circle" style="background-image: url('fried3.jpg');"></div>
+            <p class="item-desc">Fried Rice: Savory rice, veggies, and spices.</p>
+        </div>
+        <!-- Add more gallery items as needed -->
+    </div>
+</section>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p> <a href="mailto:Bookabite@gmail.com" style="color: #318ddd;">Bookabite@gmail.com</a></p>
+            <p>Address: Sherubtse, Kanglung</p>
+        </div>
+        <div class="footer-center">
+            <ul class="footer-menu">
+                <li><a href="#">Privacy Policy & Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <p>Follow us: 
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<script src=""></script>
+<script>
+    // Add this to your index.js file or replace the script tag content
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        // Toggle menu function
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+    
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', toggleMenu);
+    
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && 
+                !navLinks.contains(e.target) && 
+                navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+    </script>
+</body>
+</head> 
+</html>   
